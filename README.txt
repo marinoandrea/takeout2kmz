@@ -3,12 +3,12 @@ Saved Places to KMZ
 Build and run (a C11 compiler and make are needed):
 
     make
-    ./saved_places_to_kmz "Saved Places.json" places.kmz
+    ./takeout2kmz "Saved Places.json" places.kmz
 
 Linux installation (defaults to /usr/local/bin):
     make
     sudo make install
-    saved_places_to_kmz "Saved Places.json" places.kmz
+    takeout2kmz "Saved Places.json" places.kmz
     sudo make uninstall
 
 Per-user installation (no sudo; add ~/.local/bin to PATH if needed):
@@ -22,7 +22,7 @@ CC, CPPFLAGS, CFLAGS, LDFLAGS, and LDLIBS can be overridden on make's command
 line. Run make clean to remove the locally built executable.
 
 Or compile directly:
-    cc -std=c11 -O2 -Wall -Wextra -Wpedantic main.c -o saved_places_to_kmz
+    cc -std=c11 -O2 -Wall -Wextra -Wpedantic main.c -o takeout2kmz
 
 No external libraries, commands, network access, or compression library are
 used by the program. It writes doc.kml inside a standard ZIP archive using

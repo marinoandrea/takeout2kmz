@@ -8,17 +8,17 @@ INSTALL = install
 INSTALL_PROGRAM = $(INSTALL) -m 755
 
 .PHONY: all clean install uninstall
-all: saved_places_to_kmz
+all: takeout2kmz
 
-saved_places_to_kmz: main.c
+takeout2kmz: main.c
 	$(CC) $(CPPFLAGS) $(CFLAGS) main.c $(LDFLAGS) $(LDLIBS) -o $@
 
-install: saved_places_to_kmz
+install: takeout2kmz
 	mkdir -p "$(DESTDIR)$(bindir)"
-	$(INSTALL_PROGRAM) saved_places_to_kmz "$(DESTDIR)$(bindir)/saved_places_to_kmz"
+	$(INSTALL_PROGRAM) takeout2kmz "$(DESTDIR)$(bindir)/takeout2kmz"
 
 uninstall:
-	rm -f "$(DESTDIR)$(bindir)/saved_places_to_kmz"
+	rm -f "$(DESTDIR)$(bindir)/takeout2kmz"
 
 clean:
-	rm -f saved_places_to_kmz
+	rm -f takeout2kmz

@@ -1,5 +1,5 @@
 /* Saved Places GeoJSON -> KMZ. Build: cc -std=c11 -O2 -Wall -Wextra -Wpedantic
- * main.c -o saved_places_to_kmz
+ * main.c -o takeout2kmz
  * Uses only the ISO C11 standard library; ZIP method 0 (stored), no zlib.
  */
 #include <limits.h>
