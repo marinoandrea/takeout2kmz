@@ -1,0 +1,6 @@
+/saved_places_to_kmz
+/stage/
+*.kmz
+*.kml
+*.json
+.DS_Store
